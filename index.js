@@ -14,8 +14,8 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
 
 app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "Frontend", "build")));
-  res.sendFile(path.resolve(__dirname, "Frontend", "build", "index.html"));
+  app.use(express.static(path.resolve(__dirname, "frontend", "build")));
+  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 });
 
 app.listen(port, () => {
